@@ -1,20 +1,22 @@
-# Restaurant Ordering & Management System
+# 🍽️ Paradise Restaurant Ordering & Management System
 
-A full-stack restaurant ordering and management system built with React, Node.js, Express, and MongoDB.
+A full-stack restaurant ordering and management system built with the MERN stack.
 
-The application allows customers to browse the restaurant menu, register and log in securely, place food orders, and manage their order history. It also includes an administrator panel for managing menu items and restaurant operations.
-
-> **Note**
->
-> This project was originally developed as a learning project to gain practical experience in building production-style full-stack web applications using the MERN stack.
+Customers can browse the menu, add food to the cart, place orders, and view order history. Administrators can manage menu items through a dedicated dashboard.
 
 ---
 
-# Project Overview
+## Preview
 
-Modern restaurants require an efficient digital ordering system that allows customers to place orders while enabling administrators to manage menu items from a single dashboard.
+(Add screenshots here)
 
-This application demonstrates a complete full-stack implementation including authentication, protected routes, role-based access, REST APIs, database integration, and responsive user interfaces.
+| Home | Cart |
+|------|------|
+| screenshot | screenshot |
+
+| Checkout | Admin |
+|------|------|
+| screenshot | screenshot |
 
 ---
 
@@ -22,101 +24,76 @@ This application demonstrates a complete full-stack implementation including aut
 
 ## Customer
 
-- User Registration
-- Secure Login using JWT Authentication
+- User Registration & Login
+- JWT Authentication
 - Browse Restaurant Menu
-- Category-based Menu Filtering
-- Add Items to Cart
-- Checkout Process
-- View Order History
-- Responsive User Interface
+- Category Filtering
+- Responsive Menu Cards
+- Add to Cart
+- Update Cart Quantity
+- Checkout
+- Order History
+- Responsive Design
 
 ---
 
-## Administrator
+## Admin
 
 - Secure Admin Login
-- Create Menu Items
-- Update Menu Items
+- Add Menu Items
+- Edit Menu Items
 - Delete Menu Items
-- Manage Customer Orders
+- Manage Restaurant Menu
 
 ---
 
-# Technology Stack
+# Tech Stack
 
-## Frontend
+### Frontend
 
 - React 19
-- React Router
+- React Router DOM
 - Axios
 - Bootstrap
 - React Bootstrap
-- Custom CSS
+- CSS3
 
----
-
-## Backend
+### Backend
 
 - Node.js
 - Express.js
 - JWT Authentication
-- REST APIs
+- REST API
 
----
-
-## Database
+### Database
 
 - MongoDB
 - Mongoose
 
 ---
 
-# Project Structure
+# Folder Structure
 
 ```
-Restaurant Ordering System
+Restaurant-Ordering-System
 │
 ├── backend
 │   ├── config
 │   ├── middleware
 │   ├── models
 │   ├── routes
+│   ├── controllers
 │   └── server.js
 │
 └── frontend
+    ├── public
     ├── src
     │   ├── api
     │   ├── components
+    │   ├── pages
     │   ├── styles
-    │   └── utils
-    └── public
+    │   └── App.js
 ```
-
----
-
-# Authentication
-
-The project uses JSON Web Tokens (JWT) to secure protected routes.
-
-Authentication Flow
-
-- User Login
-- JWT Token Generation
-- Token stored in Local Storage
-- Protected API Requests
-- Role-based Authorization
-
----
-
-# API Modules
-
-Backend APIs include:
-
-- Authentication
-- Menu Management
-- Orders
-- Administrator Operations
 
 ---
 
@@ -125,7 +102,7 @@ Backend APIs include:
 ## Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/YOUR_USERNAME/restaurant-ordering-system.git
 ```
 
 ---
@@ -134,8 +111,16 @@ git clone <repository-url>
 
 ```bash
 cd backend
+
 npm install
+
 npm run dev
+```
+
+Backend runs on
+
+```
+http://localhost:5000
 ```
 
 ---
@@ -144,73 +129,124 @@ npm run dev
 
 ```bash
 cd frontend
+
 npm install
+
 npm start
+```
+
+Frontend runs on
+
+```
+http://localhost:3000
 ```
 
 ---
 
-## Environment Variables
+# Environment Variables
 
-Backend
+Backend (.env)
 
-```
-PORT=
-MONGO_URI=
-JWT_SECRET=
+```env
+PORT=5000
+
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_secret_key
 ```
 
 Frontend
 
-```
+```env
 REACT_APP_API_URL=http://localhost:5000/api
+```
+
+---
+
+# API Endpoints
+
+## Authentication
+
+```
+POST   /api/auth/register
+
+POST   /api/auth/login
+```
+
+## Menu
+
+```
+GET    /api/menu
+
+POST   /api/menu
+
+PUT    /api/menu/:id
+
+DELETE /api/menu/:id
+```
+
+## Orders
+
+```
+POST   /api/orders
+
+GET    /api/orders/my
 ```
 
 ---
 
 # Screenshots
 
-Screenshots will be added soon.
+### Login
 
-Suggested screenshots:
+(Add Screenshot)
 
-- Login
-- Registration
-- Home Page
-- Menu
-- Cart
-- Checkout
-- Orders
-- Admin Dashboard
+---
+
+### Register
+
+(Add Screenshot)
+
+---
+
+### Menu
+
+(Add Screenshot)
+
+---
+
+### Cart
+
+(Add Screenshot)
+
+---
+
+### Checkout
+
+(Add Screenshot)
+
+---
+
+### Orders
+
+(Add Screenshot)
+
+---
+
+### Admin Dashboard
+
+(Add Screenshot)
 
 ---
 
 # Future Improvements
 
-Planned enhancements include:
-
-- Payment Gateway Integration
-- Search Functionality
-- Food Image Upload
+- Online Payment Integration
+- Food Search
+- Image Upload
 - Order Tracking
-- User Profile Management
 - Email Notifications
 - Dashboard Analytics
-
----
-
-# What I Learned
-
-While building this project, I gained practical experience in:
-
-- Designing REST APIs
-- React Component Architecture
-- JWT Authentication
-- MongoDB Data Modeling
-- State Management
-- API Integration
-- Responsive Web Design
-- Full-stack Application Development
 
 ---
 
@@ -218,10 +254,13 @@ While building this project, I gained practical experience in:
 
 **Sri Deepak Bolisetti**
 
-Software Developer
+Associate Software Developer
 
-GitHub:
+GitHub
+
 https://github.com/d33pak1065
 
-LinkedIn:
+LinkedIn
+
+https://www.linkedin.com/in/sri-deepak-bolisetti-096006344
 https://linkedin.com/in/sri-deepak-bolisetti-096006344
