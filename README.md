@@ -35,7 +35,7 @@ Customers can browse the menu, add food to the cart, place orders, and view orde
 
 ### Admin Dashboard
 
-![Admin Dashboard](screenshots/Admin Dashboard.png)
+![Admin Dashboard](screenshots/Admindashboard.png)
 
 ---
 
