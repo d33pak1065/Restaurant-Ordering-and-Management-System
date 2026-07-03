@@ -14,11 +14,6 @@ Customers can browse the menu, add food to the cart, place orders, and view orde
 
 ---
 
-### Menu
-
-![Menu](screenshots/Menu.png)
-
----
 
 ### Cart
 
