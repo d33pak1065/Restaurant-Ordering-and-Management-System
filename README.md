@@ -121,7 +121,7 @@ Restaurant-Ordering-System
 ## Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/restaurant-ordering-system.git
+git clone https://github.com/d33pak1065/Restaurant-Ordering-and-Management-System.git
 ```
 
 ---
