@@ -8,15 +8,39 @@ Customers can browse the menu, add food to the cart, place orders, and view orde
 
 ## Preview
 
-(Add screenshots here)
+### Home
 
-| Home | Cart |
-|------|------|
-| screenshot | screenshot |
+![Home](screenshots/Home.png)
 
-| Checkout | Admin |
-|------|------|
-| screenshot | screenshot |
+---
+
+### Menu
+
+![Menu](screenshots/Menu.png)
+
+---
+
+### Cart
+
+![Cart](screenshots/Cart.png)
+
+---
+
+### Checkout
+
+![Checkout](screenshots/Checkout.png)
+
+---
+
+### Orders
+
+![Orders](screenshots/Orders.png)
+
+---
+
+### Admin Dashboard
+
+![Admin Dashboard](screenshots/Admin Dashboard.png)
 
 ---
 
@@ -193,49 +217,6 @@ POST   /api/orders
 GET    /api/orders/my
 ```
 
----
-
-# Screenshots
-
-### Login
-
-(Add Screenshot)
-
----
-
-### Register
-
-(Add Screenshot)
-
----
-
-### Menu
-
-(Add Screenshot)
-
----
-
-### Cart
-
-(Add Screenshot)
-
----
-
-### Checkout
-
-(Add Screenshot)
-
----
-
-### Orders
-
-(Add Screenshot)
-
----
-
-### Admin Dashboard
-
-(Add Screenshot)
 
 ---
 
