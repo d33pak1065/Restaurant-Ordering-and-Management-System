@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import {NavLink, Link, useNavigate } from 'react-router-dom';
 import { clearAuth, getUser } from '../utils/auth';
 import './nav.css';
 
@@ -22,18 +22,18 @@ const Navbar = () => {
       </div>
 
       <div className="nav-right">
-        <Link to="/">Menu</Link>
-        <Link to="/cart">Cart</Link>
+        <NavLink to="/">Menu</NavLink>
+        <NavLink to="/cart">Cart</NavLink>
         {user ? (
           <>
-            <Link to="/orders">Orders</Link>
-            {user.isAdmin && <Link to="/admin">Admin</Link>}
+            <NavLink to="/orders">Orders</NavLink>
+            {user.isAdmin && <NavLink to="/admin">Admin</NavLink>}
             <button className="btn-link" onClick={logout}>Logout</button>
           </>
         ) : (
           <>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
+            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/register">Register</NavLink>
           </>
         )}
       </div>

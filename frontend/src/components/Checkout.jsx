@@ -1,25 +1,32 @@
-import React, { useState } from 'react';
-import API from '../api/api';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import API from "../api/api";
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const cart = JSON.parse(localStorage.getItem('paradise_cart') || '[]');
-  const total = cart.reduce((s, i) => s + (i.price * i.qty), 0);
+  const cart = JSON.parse(localStorage.getItem("paradise_cart") || "[]");
+  const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
 
   const placeOrder = async () => {
-    if (cart.length === 0) return alert('Cart empty');
+    if (cart.length === 0) return alert("Cart empty");
     setLoading(true);
     try {
-      const items = cart.map(i => ({ menuItem: i._id, qty: i.qty, price: i.price }));
-      await API.post('/orders', { items, total });
-      localStorage.removeItem('paradise_cart');
-      alert('Order placed!');
-      navigate('/orders');
+      const items = cart.map((i) => ({
+        menuItem: i._id,
+        qty: i.qty,
+        price: i.price,
+      }));
+      await API.post("/orders", { items, total });
+      localStorage.removeItem("paradise_cart");
+      alert("Order placed!");
+      navigate("/orders");
     } catch (err) {
       console.error(err.response?.data || err.message);
-  alert('Error placing order: ' + (err.response?.data?.message || 'Unknown error'));
+      alert(
+        "Error placing order: " +
+          (err.response?.data?.message || "Unknown error"),
+      );
     }
     setLoading(false);
   };
@@ -30,20 +37,29 @@ const Checkout = () => {
       <div className="checkout-panel">
         <div>
           <h3>Order</h3>
-          {cart.map(i => (
+          {cart.map((i) => (
             <div key={i._id} className="checkout-item">
-              <span>{i.qty} x {i.name}</span>
+              <span>
+                {i.qty} x {i.name}
+              </span>
               <span>₹{(i.qty * i.price).toFixed(2)}</span>
             </div>
           ))}
-          <hr/>
-          <div className="checkout-total">Total: ₹{total.toFixed(2)}</div>
+          <hr />
+          <div className="checkout-total">
+            <span>Total</span>
+            <span>₹{total.toFixed(2)}</span>
+          </div>
         </div>
         <div>
           <h3>Payment</h3>
           <p>For demo, payment is mocked. Click place order to finish.</p>
-          <button className="btn" onClick={placeOrder} disabled={loading}>
-            {loading ? 'Placing...' : 'Place Order'}
+          <button
+            className="btn btn-success"
+            onClick={placeOrder}
+            disabled={loading}
+          >
+            {loading ? "Placing Order..." : "Place Order"}
           </button>
         </div>
       </div>

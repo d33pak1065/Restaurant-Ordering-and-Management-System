@@ -21,7 +21,7 @@ const MenuCard = ({ item }) => {
         <p className="desc">{item.description}</p>
         <div className="card-footer">
           <div className="price">₹{item.price.toFixed(2)}</div>
-          <button className="btn" onClick={addToCart}>Add</button>
+          <button className="btn btn-add" onClick={addToCart}>Add</button>
         </div>
       </div>
     </div>
