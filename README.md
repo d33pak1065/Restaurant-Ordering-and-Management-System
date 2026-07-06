@@ -2,18 +2,29 @@
 
 A full-stack restaurant ordering and management system built with the MERN stack.
 
-Customers can browse the menu, add food to the cart, place orders, and view order history. Administrators can manage menu items through a dedicated dashboard.
+Customers can browse the restaurant menu, add food to the cart, place orders, and view their order history. Administrators can securely manage menu items through a dedicated dashboard.
 
 ---
 
-## Preview
+# Live Demo
+
+**Frontend**
+
+https://restaurant-ordering-and-management.vercel.app
+
+**Backend API**
+
+https://paradise-restaurant.onrender.com/api
+
+---
+
+# Preview
 
 ### Home
 
 ![Home](screenshots/Home.png)
 
 ---
-
 
 ### Cart
 
@@ -43,20 +54,21 @@ Customers can browse the menu, add food to the cart, place orders, and view orde
 
 ## Customer
 
-- User Registration & Login
+- User Registration
+- User Login
 - JWT Authentication
 - Browse Restaurant Menu
-- Category Filtering
-- Responsive Menu Cards
-- Add to Cart
+- Category-based Menu Filtering
+- Responsive Menu Layout
+- Add Items to Cart
 - Update Cart Quantity
-- Checkout
-- Order History
-- Responsive Design
+- Checkout Process
+- View Order History
+- Responsive User Interface
 
 ---
 
-## Admin
+## Administrator
 
 - Secure Admin Login
 - Add Menu Items
@@ -68,7 +80,7 @@ Customers can browse the menu, add food to the cart, place orders, and view orde
 
 # Tech Stack
 
-### Frontend
+## Frontend
 
 - React 19
 - React Router DOM
@@ -77,14 +89,14 @@ Customers can browse the menu, add food to the cart, place orders, and view orde
 - React Bootstrap
 - CSS3
 
-### Backend
+## Backend
 
 - Node.js
 - Express.js
 - JWT Authentication
-- REST API
+- REST APIs
 
-### Database
+## Database
 
 - MongoDB
 - Mongoose
@@ -93,25 +105,27 @@ Customers can browse the menu, add food to the cart, place orders, and view orde
 
 # Folder Structure
 
-```
-Restaurant-Ordering-System
+```text
+Restaurant-Ordering-and-Management-System
 │
 ├── backend
 │   ├── config
 │   ├── middleware
 │   ├── models
 │   ├── routes
-│   ├── controllers
-│   └── server.js
+│   ├── server.js
+│   └── package.json
 │
-└── frontend
-    ├── public
-    ├── src
-    │   ├── api
-    │   ├── components
-    │   ├── pages
-    │   ├── styles
-    │   └── App.js
+├── frontend
+│   ├── public
+│   ├── src
+│   │   ├── api
+│   │   ├── components
+│   │   ├── styles
+│   │   └── App.js
+│   └── package.json
+│
+└── screenshots
 ```
 
 ---
@@ -124,9 +138,7 @@ Restaurant-Ordering-System
 git clone https://github.com/d33pak1065/Restaurant-Ordering-and-Management-System.git
 ```
 
----
-
-## Backend
+## Backend Setup
 
 ```bash
 cd backend
@@ -136,15 +148,15 @@ npm install
 npm run dev
 ```
 
-Backend runs on
+Backend runs locally on
 
-```
+```text
 http://localhost:5000
 ```
 
 ---
 
-## Frontend
+## Frontend Setup
 
 ```bash
 cd frontend
@@ -154,9 +166,9 @@ npm install
 npm start
 ```
 
-Frontend runs on
+Frontend runs locally on
 
-```
+```text
 http://localhost:3000
 ```
 
@@ -164,17 +176,16 @@ http://localhost:3000
 
 # Environment Variables
 
-Backend (.env)
+## Backend (.env)
 
 ```env
 PORT=5000
-
-MONGO_URI=your_mongodb_connection_string
-
+MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
+CLIENT_URL=http://localhost:3000
 ```
 
-Frontend
+## Frontend (.env)
 
 ```env
 REACT_APP_API_URL=http://localhost:5000/api
@@ -186,32 +197,42 @@ REACT_APP_API_URL=http://localhost:5000/api
 
 ## Authentication
 
-```
+```http
 POST   /api/auth/register
-
 POST   /api/auth/login
 ```
 
 ## Menu
 
-```
+```http
 GET    /api/menu
-
 POST   /api/menu
-
 PUT    /api/menu/:id
-
 DELETE /api/menu/:id
 ```
 
 ## Orders
 
-```
+```http
 POST   /api/orders
-
 GET    /api/orders/my
 ```
 
+---
+
+# Deployment
+
+## Frontend
+
+Vercel
+
+https://restaurant-ordering-and-management.vercel.app
+
+## Backend
+
+Render
+
+https://paradise-restaurant.onrender.com/api
 
 ---
 
@@ -219,10 +240,11 @@ GET    /api/orders/my
 
 - Online Payment Integration
 - Food Search
-- Image Upload
 - Order Tracking
+- Customer Profile
 - Email Notifications
 - Dashboard Analytics
+- Image Upload
 
 ---
 
@@ -239,4 +261,3 @@ https://github.com/d33pak1065
 LinkedIn
 
 https://www.linkedin.com/in/sri-deepak-bolisetti-096006344
-https://linkedin.com/in/sri-deepak-bolisetti-096006344
